@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoadWays Tracking App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+  <link rel="stylesheet" href="style/public.css">
+</head>
+
+<body>
+
+  <header>
+
+    <nav
+    class="navbar navbar-expand-lg fixed-top"
+    onscroll="changeNavbarColor()"
+    >
+    <div class="container-fluid my-0 py-0 mx-2">
+      <a class="navbar-brand" href="index.html">
+        <div class="logo d-flex align-items-center mx-2">
+           <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            id="map-marker-shield"
+          >
+            <path
+              fill="#e9b913"
+              d="M14.41,6.53a2.24,2.24,0,0,1-1.82-.39,1,1,0,0,0-1.18,0,2.24,2.24,0,0,1-1.82.39,1,1,0,0,0-.84.2,1,1,0,0,0-.37.78v2.9A4.14,4.14,0,0,0,10,13.74l1.37,1a1,1,0,0,0,1.18,0l1.37-1a4.14,4.14,0,0,0,1.66-3.33V7.51a1,1,0,0,0-.37-.78A1,1,0,0,0,14.41,6.53Zm-.79,3.88a2.15,2.15,0,0,1-.85,1.73l-.77.57-.77-.57a2.15,2.15,0,0,1-.85-1.73V8.57A4.22,4.22,0,0,0,12,8.12a4.22,4.22,0,0,0,1.62.45Zm6.84-.78A8.5,8.5,0,0,0,7.3,3.36,8.56,8.56,0,0,0,3.54,9.63,8.46,8.46,0,0,0,6,16.46l5.3,5.31a1,1,0,0,0,1.42,0L18,16.46A8.46,8.46,0,0,0,20.46,9.63ZM16.6,15.05,12,19.65l-4.6-4.6A6.49,6.49,0,0,1,5.53,9.83,6.57,6.57,0,0,1,8.42,5a6.47,6.47,0,0,1,7.16,0,6.57,6.57,0,0,1,2.89,4.81A6.49,6.49,0,0,1,16.6,15.05Z"
+            ></path>
+          </svg> 
+          
+          <div class="logo-name ms-2"><h2 class="log1">RoadWays</h2>
+            <p class="log">Humsafar Raston Kaa...</p>
+          </div>
+        </div>
+      </a>
+      <button
+        class="navbar-toggler mx-3"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse py-3" id="navbarScroll">
+        <ul
+          class="navbar-nav ms-auto me-0 my-2 mx-2 my-lg-0 navbar-nav-scroll"
+          style="--bs-scroll-height: 700px"
+        >
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="index.html"
+              role="button"
+              aria-expanded="false"
+            >
+              Home
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Product
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="fleet.html"
+                  ><i class="uil uil-pump" style="color: green"></i> Fuel
+                  Monitoring Software</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="telematic.html"
+                  ><i
+                    class="uil uil-webcam"
+                    style="color: palevioletred"
+                  ></i>
+                  Video Telematics Software</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="driver.html"
+                  ><i
+                    class="uil uil-streering"
+                    style="color: rgb(13, 13, 235)"
+                  ></i>
+                  Driver Behaviour Monitoring
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="route.html"
+                  ><i class="uil uil-sign-alt" style="color: yellow"></i
+                  >Route Planning</a
+                >
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="electric.html"
+                  ><i
+                    class="uil uil-bus-school"
+                    style="color: rgb(140, 18, 189)"
+                  ></i>
+                  Electric Vehicle</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Industries
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="logistic.html"
+                  ><i
+                    class="uil uil-truck"
+                    style="color: rgb(20, 223, 162)"
+                  ></i
+                  >Logistics and Transport</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="public.html"
+                  ><i
+                    class="uil uil-bus"
+                    style="color: rgb(13, 13, 235)"
+                  ></i
+                  >Public Transport</a
+                >
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="medical.html"
+                  ><i
+                    class="uil uil-ambulance"
+                    style="color: palevioletred"
+                  ></i
+                  >Medical and Healthcare</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="rental.html"
+                  ><i class="uil uil-car-wash" style="color: purple"></i
+                  >Rental Vehicles</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Hardware
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="gps.html"
+                  ><i
+                    class="uil uil-circuit"
+                    style="color: rgb(221, 96, 24)"
+                  ></i
+                  >GPS</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="iot.html"
+                  ><i
+                    class="uil uil-object-ungroup"
+                    style="color: rgb(20, 223, 162)"
+                  ></i
+                  >IoT</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Company
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="about.html"
+                  ><i class="uil uil-info-circle" style="color: green"></i
+                  >About Us</a
+                >
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="contact.html"
+                  ><i
+                    class="uil uil-phone-volume"
+                    style="color: rgb(13, 13, 235)"
+                  ></i
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <button class="btn" type="submit"><a href="contact.html">Free Demo</a></button>
+      </div>
+    </div>
+  </nav>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active " data-bs-interval="3000">
+          <div class="carousel-overlay"></div>
+          <img src="image/publicimage.jpeg" class="d-block w-100 carousel-img" alt="...">
+          <div class="carousel-caption d-md-block ">
+            <h3>Public Transport Tracking Software</h3>
+            <p>Cut costs and boost efficiency in your public transportation fleet with RoadWays.</p>
+            <button class="btn" type="submit"><a href="contact.html">Schedule Free Demo</a></button>
+          </div>
+        </div>
+     
+      </div>
+  </header>
+  <section class="about1 my-2">
+    <div class="about1-container">
+      <div class="about1-content">
+        <h2>Revolutionize   </h2>
+          <h4> Public Transportation Optimization</h4>
+       
+        <p>Unlock unprecedented levels of efficiency and cost reduction within your public transportation fleet by harnessing the power of RoadWays's cutting-edge solutions. With RoadWays, optimize operations, minimize expenses, and achieve peak performance effortlessly and reliably, ensuring seamless transit experiences
+          
+          </p>
+      </div>
+      <div class="about1-img" >
+        <img src="image/improve-public-transport (1).jpg" alt="">
+      </div>
+    </div>
+  </section>
+  
+
+  <!--features-->
+  <div class="containerbox py-5" id="hanging-icons">
+    <h2 class="pb-2 text-center">What You Get </h2>
+    <h3 class="pb-4 text-center">Empowering effortless city navigation for the public, while generating substantial profits!</h3>
+    <div class="row g-4 py-5 mx-2 px-5 row-cols-1 row-cols-lg-2">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <img src="image/emergency-call.svg" alt="">
+        </div>
+        <div>
+          <h5 class="fs-3 ">Advanced Security</h5>
+          <p>
+            
+Safety features like the SOS button and panic alarm ensure passenger security. Additionally, passenger and vehicle safety is ensured through immobilization and live tracking capabilities. Driver supervision further enhances public transportation safety.</p>
+          
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-body-emphasis  d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <img src="image/current-location.svg" alt="">
+        </div>
+        <div>
+          <h5 class="fs-3 ">Geofenced Routing</h5>
+          <p>
+            Maximize route efficiency by optimizing each vehicle's path within designated geofenced areas to prevent overlapping routes. Receive notifications if a vehicle deviates from its designated course. Additionally, monitor vehicle adherence to routes and stops for enhanced oversight.</p>
+         
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <img src="image/tr.png" alt="">
+        </div>
+        <div>
+          <h5 class="fs-3">
+            Distance Tracking</h5>
+          <p>Monitor trip durations and driver shift hours using direct odometer readings within the innovative software platform. These accurate readings facilitate precise expense management and enable seamless fare calculation for passenger trips, ensuring optimal efficiency and transparency in operations.</p>
+          
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+          <img src="image/analysis.svg" alt="">
+        </div>
+        <div>
+          <h5 class="fs-3"> Predictive ETAs</h5>
+          <p>
+           
+            Utilize diagnostic data, including distance and travel time reports, to generate precise ETAs. Enhanced with geospatial traffic reports, our software delivers the most accurate ETAs for your passengers, ensuring optimal planning and satisfaction.</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+<!--two boxes-->
+<div class="services section-padding id=services">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-header text-center">
+   <h2>What's Offered</h2>
+   <h6>
+    A forward-looking strategy to keep you ahead of the game.</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6 ">
+      <div class="single-services text-center " >
+          <img src="image/ic.png" alt="">
+         
+     <h2>Real-time Visibility</h2>
+     <p>
+      Gain detailed fleet analytics for informed decision-making and effective real time fleet management.</p>
+      </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-services text-center">
+          <img src="image/trr.png" alt="">
+       <h2>
+      
+        Route Optimization</h2>
+       <p>Optimize routes for cost savings and improved service quality by leveraging real-time traffic data , vehicle capacity.</p>
+        </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="single-services text-center">
+            <img src="image/sos.jpg" alt="">
+         <h2>SOS Button</h2>
+         <p>
+          Enhance passenger safety with an emergency button for immediate assistance, ensuring peace of mind.</p>
+          </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="single-services text-center">
+              <img src="image/rep.svg" alt="">
+           <h2>Detailed Reports</h2>
+           <p>
+            Access detailed fleet analytics for informed decision-making and operational optimizationfleet management.</p>
+            </div>
+            </div>
+
+
+    </div>
+
+   
+  </div>
+</div>
+
+<section class="about py-5 my-2">
+  <h2 class="text-center ">Operate Publicly, Track Privately!</h2>
+  <div class="about-container py-5">
+    <div class="about-content about">
+    
+       
+<h3> Public Transportation  Management</h3>
+<p>
+  Managing a fleet of public transportation vehicles is a complex and sensitive task, as they carry passengers, not just cargo. Public transport is crucial for saving time, money, and ensuring road safety.
+
+  </p>
+ 
+<h3>
+  RoadWays Solutions</h3>
+<p>
+  
+
+RoadWays empowers fleet managers to minimize fuel costs, enhance vehicle and passenger security. Boost your fleet's efficiency and elevate your city's public transportation network with our comprehensive fleet management solution.
+  </p>
+    </div>
+    <div class="about-img">
+    <img src="image/pub.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+
+
+<div class="card1-container py-5 px-5">
+  <div class="card1">
+    <img src="image/recycle.svg">
+    <h3>
+      Environmental Sustainability</h3>
+    <p>
+      Mitigates greenhouse gas emissions and air pollutants.
+      Contributes to achieving sustainability goals and reducing ecological footprint.</p>
+  </div>
+  <div class="card1">
+    <img src="image/audit.svg">
+    <h3>
+      Cost-Effectiveness</h3>
+    <p>Offers cost-efficient mobility solutions, optimizing resource      allocation.
+    Reduces financial burden on individuals and promotes fiscal responsibility.
+    </p>
+  </div>
+  <div class="card1">
+     <img src="image/routeimg.svg.svg">
+      <h3>
+        Traffic Reduction</h3>
+      <p>Alleviates traffic congestion by optimizing road space  utilization.
+        Enhances traffic flow efficiency and minimizes travel delays.</p>
+    </div>
+    <div class="card1">
+      <img src="image/social.svg">
+      <h3>
+        Social Inclusivity</h3>
+      <p>
+        
+    Enhances accessibility and promotes equitable transportation access.
+    Improves mobility options for marginalized populations and promotes social cohesion.</p>
+    </div>
+    
+    
+  <!-- Add more cards here -->
+</div>
+
+<section class="faqs px-4 py-5 mb-4">
+  <h2 class="title">Frequently asked questions</h2>
+  
+  <div class="faq">
+    <div class="question">
+      <h3> What is GPS fleet tracking?</h3>
+      <i class="uil uil-angle-down"></i>
+    </div>
+    <div class="answer">
+      <p> GPS fleet tracking is the process of monitoring commercial vehicles’ locations in real time. It is the
+        process of getting real-time information on assets scattered across states or borders. GPS fleet tracking
+        software allows managers to be aware of where their vehicles are at all times. It helps managers to plan
+        routes, send emergency help, generate accurate ETAs and keep tabs on their consignment.</p>
+    </div>
+  </div>
+  <div class="faq">
+    <div class="question">
+      <h3> What kinds of information can GPS tracking software access?</h3>
+      <i class="uil uil-angle-down"></i>
+    </div>
+    <div class="answer">
+      <p>GPS tracking platform can ideally access the latitudinal and longitudinal coordinates of a vehicle in
+        real-time. It can track geocoded information as well. However, when paired with advanced algorithms and
+        features, GPS tracking software can be revamped into a complete fleet management solution. This solution can
+        access information such as engine health, driver behaviour, fuel levels, and odometer readings among others.
+      </p>
+    </div>
+  </div>
+  <div class="faq">
+    <div class="question">
+      <h3> Why should I use telematics software for GPS Tracking business?</h3>
+      <i class="uil uil-angle-down"></i>
+    </div>
+    <div class="answer">
+      <p> Telematics uses wireless devices to collect real-time data from commercial vehicles and transmit them to
+        your systems. GPS Tracking goes beyond locational monitoring and provides a comprehensive transport management
+        solution to businesses. It offers driver monitoring system, video telematics, vehicle health diagnostics and
+        so much more. The more comprehensive the solution is, the better the fleet analytics get. Hence, stimulating
+        better decision-making and swelling profits.</p>
+    </div>
+  </div>
+</section>
+<section class="get-in-touch my-5 py-3">
+  <div class="container my-2">
+    <div class="p-2 text-center touch bg-body-tertiary rounded-3 my-3">
+      <div class="row col-md-12 main">
+        <div class="col-md-6 image-area">
+        <img src="image/cont.gif" alt="">
+        </div>
+        <div class="col-md-6  form-area">
+          <div class="form-header mb-4">
+            <h1>Get in Touch with Us!</h1>
+          </div>
+          <form
+          action="http://localhost:3000/send"
+          method="POST"
+            class="form"
+            id="contactForm"
+            
+          >
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="nameInput"
+                name ="nameInput"
+              />
+              <label for="nameInput"
+                ><i class="bi bi-person-fill"></i>Name</label
+              >
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="tel"
+                class="form-control"
+                id="mobileInput"
+                name="mobileInput"
+                placeholder="Mobile number"
+                pattern="[0-9]{10}"
+                required
+              />
+              <label for="mobileInput"
+                ><i class="bi bi-phone-fill"></i>Mobile Number</label
+              >
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="emailInput"
+                name="emailInput"
+                placeholder="Email Address"
+                required
+              />
+              <label for="emailInput"
+                ><i class="bi bi-envelope-fill"></i>Email</label
+              >
+            </div>
+            <div class="form-floating mb-3">
+              <textarea
+                class="form-control"
+                id="messageInput"
+                name="messageInput"
+                placeholder="Message"
+              ></textarea>
+              <label for="messageInput"
+                ><i class="bi bi-chat-left-dots-fill"></i>Message</label
+              >
+            </div>
+            <button type="submit" class="btn btn-custom">Submit</button>
+          </form>
+          <div id="responseMessage" class="mt-3"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class=" text-white pt-5 pb-4" style="background-color: #333;">
+  <div class="container  text-md-left">
+
+    <div class="row  text-md-left">
+
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="mb-4 font-weight-bold text-warning">RoadWays</h5>
+        <p>RoadWays Tracking offers a customizable cloud-based solution designed for fleet
+          management
+          and asset tracking. </p>
+
+      </div>
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="mb-4 font-weight-bold text-warning">Products</h5>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">Route Tracker</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">Vehical Tracker</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">Fleet Management</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">Video Telematics </a>
+        </p>
+      </div>
+
+
+      <div class="col-md-3 col-lg-2 col-xl-2 mt-3">
+        <h5 class="mb-4 font-weight-bold text-warning">Quick Links</h5>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">Home</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">About Us</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">Contact Us</a>
+        </p>
+        <p>
+          <a href="#" class="text-white" style="text-decoration: none;">Tech Support</a>
+        </p>
+        
+      </div>
+
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="mb-4 font-weight-bold text-warning">Contact</h5>
+        <p>
+          <i class="bi bi-house-door-fill " style="font-size: 20px;"></i>Lucknow, UP 226010
+        </p>
+        <p>
+          <i class="bi bi-envelope-at-fill " style="font-size: 20px;"></i>asktoroadways@outlook.com
+        </p>
+        
+
+      </div>
+    </div>
+    <hr class="mb-4">
+    <div class="row align-items-center">
+      <div class="col-md-7 col-lg-8">
+        <p>Copyright @2024 All rights reserved by:
+          <a href="#" style="text-decoration: none;">
+            <strong class="text-warning">RoadWays</strong>
+          </a>
+        </p>
+      </div>
+      <div class="col-md-5 col-lg-4">
+        <div class="text-center text-md-right">
+          <ul class="list-unstyled d-flex ">
+            <li><a href="" class="btn-floating btn-sm text-white mx-2" style="font-size: 23px;"><i
+                  class="bi bi-facebook"></i></a></li>
+            <li><a href="" class="btn-floating btn-sm text-white mx-2" style="font-size: 23px;">
+            <li><a href=""><i class="bi bi-instagram"></i></a></li></a></li>
+            <li><a href="" class="btn-floating btn-sm text-white mx-2" style="font-size: 23px;"><i
+                  class="bi bi-twitter"></i></a></li>
+            <li><a href="" class="btn-floating btn-sm text-white mx-2" style="font-size: 23px;"><i
+                  class="bi bi-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="script/script.js"></script>
+</body>
+
+</html>
